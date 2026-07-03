@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <!-- ============ SETUP VIEW ============ -->
+  <div id="setup-view" class="view hidden">
+    <header class="bar">
+      <span class="logo">◍</span>
+      <h1>Connect to Open WebUI</h1>
+    </header>
+    <div class="setup-body">
+      <label>Server URL
+        <input id="server-url" type="url" placeholder="http://localhost:8080" spellcheck="false" />
+      </label>
+      <label>API Key
+        <input id="api-key" type="password" placeholder="sk-..." spellcheck="false" />
+      </label>
+      <p class="hint">
+        Get a key in Open WebUI under <b>Settings → Account → API Keys</b>.
+      </p>
+      <button id="connect-btn" class="primary">Connect</button>
+      <p id="setup-error" class="error hidden"></p>
+    </div>
+  </div>
+
+  <!-- ============ CHAT VIEW ============ -->
+  <div id="chat-view" class="view hidden">
+    <header class="bar">
+      <span class="logo">◍</span>
+      <select id="model-select" title="Model"></select>
+      <button id="open-webui-btn" class="icon-btn" title="Open Open WebUI">⧉</button>
+      <button id="settings-btn" class="icon-btn" title="Settings">⚙</button>
+    </header>
+
+    <div class="context-bar">
+      <label class="ctx"><input type="checkbox" id="ctx-this-tab" checked /> This page</label>
+      <label class="ctx"><input type="checkbox" id="ctx-all-tabs" /> All tabs</label>
+      <span id="ctx-info" class="ctx-info"></span>
+    </div>
+
+    <div id="messages"></div>
+
+    <footer class="composer">
+      <textarea id="input" rows="2" placeholder="Ask about this page…"></textarea>
+      <div class="composer-actions">
+        <button id="continue-btn" class="ghost" title="Save this chat to Open WebUI and continue there">Continue in Open WebUI ↗</button>
+        <button id="new-chat-btn" class="ghost" title="Start a new chat">New</button>
+        <button id="send-btn" class="primary">Send</button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

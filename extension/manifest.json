@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Open WebUI Companion",
+  "version": "1.0.0",
+  "description": "Chat with your Open WebUI models about the web pages you're viewing — single tab or all of them.",
+  "permissions": ["storage", "activeTab", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Open WebUI Companion",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

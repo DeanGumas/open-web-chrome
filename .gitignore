@@ -1,0 +1,4 @@
+server/data/
+server/.api-key
+__pycache__/
+.DS_Store
